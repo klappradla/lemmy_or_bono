@@ -7,8 +7,6 @@ module LemmyOrBono
     def initialize(file_path)
       config_file = IO.read(file_path)
       @content = JSON.parse(config_file)
-      #@points = 0
-      @jack = @content['jack']
     end
 
     def start
@@ -20,27 +18,26 @@ module LemmyOrBono
     private
 
     def game_loop(questions)
+      jack = @content['jack']
       goal = @content['win']['threshold']
 
-      while @jack < goal
+      while jack < goal
         step = false
-        questions.each do |question|
 
-          if question['threshold'] < @jack
+        questions.each do |question|
+          if question['threshold'] < jack
             step = true
-            @jack += (render_question(question))
-            puts @jack
+            jack += (render_question(question))
+            puts jack
           end
         end
 
-        if !step || @jack < 1
+        if !step || jack < 1
           render_ascii(@content['loose'])
+          exit(0)
         end
-
       end
-
       render_ascii(@content['win']['file'])
-
     end
 
     def render_ascii(file_path)
@@ -52,30 +49,30 @@ module LemmyOrBono
       if question['type'] == 1
         return render_question_abc(question)
       end
-      render_question_jack(question)
+      return render_question_jack(question)
     end
 
     def render_question_abc(question)
-      i = ['a', 'b', 'c']
-      puts question['question']
+      options = ('a'..'c').to_a
       answers = question['answers']
+
+      puts question['question']
       answers.each_with_index do |answer, index|
-        puts "\t" + i[index] + ") " + answer['answer']
+        puts options[index] + ") " + answer['text']
       end
 
-      choice = 'z'
-      while !i.include? choice
-        print "> "
-        choice = STDIN.gets.chomp
-      end
-
-      return answers[i.index(choice)]['value'].to_i
-
-
+      answers[user_input(options)]['value'].to_i
     end
 
     def render_question_jack(question)
 
+    end
+
+    def user_input(options)
+      print "> "
+      choice = STDIN.gets.chomp
+      return options.index(choice) if options.include? choice
+      user_input(options)
     end
 
   end

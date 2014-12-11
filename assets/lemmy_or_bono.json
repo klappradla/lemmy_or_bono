@@ -8,15 +8,15 @@
       "question" : "This is question one.?",
       "answers" : [
         {
-          "answer" : "This is answer one.",
+          "text" : "This is answer one.",
           "value" : -1
         },
         {
-          "answer" : "This is answer two.",
+          "text" : "This is answer two.",
           "value" : 1
         },
         {
-          "answer" : "This is answer three.",
+          "text" : "This is answer three.",
           "value" : 3
         }
       ]

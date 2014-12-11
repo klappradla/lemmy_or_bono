@@ -1,7 +1,6 @@
+
 GAME OVER  GAME OVER  GAME OVER  GAME OVER  GAME OVER  GAME OVER
-
 You ran out of jack, you basically suck, or you're just a natural born Bono!
-
              /////|
             ///// |
            /////  |
@@ -14,5 +13,4 @@ You ran out of jack, you basically suck, or you're just a natural born Bono!
           | E | /
           |===|/
           '---'
-
 GAME OVER  GAME OVER  GAME OVER  GAME OVER  GAME OVER  GAME OVER
