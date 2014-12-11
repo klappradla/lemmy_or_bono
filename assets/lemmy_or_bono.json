@@ -1,0 +1,30 @@
+{
+  "greeting" : "assets/ascii/greeting.txt",
+  "jack" : 5,
+  "questions" : [
+    {
+      "type" : 1,
+      "threshold" : 1,
+      "question" : "This is question one.?",
+      "answers" : [
+        {
+          "answer" : "This is answer one.",
+          "value" : -1
+        },
+        {
+          "answer" : "This is answer two.",
+          "value" : 1
+        },
+        {
+          "answer" : "This is answer three.",
+          "value" : 3
+        }
+      ]
+    }
+  ],
+  "win" : {
+    "threshold" : 10,
+    "file" : "assets/ascii/win.txt"
+  },
+  "loose" : "assets/ascii/loose.txt"
+}
