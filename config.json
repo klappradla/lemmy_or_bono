@@ -1,0 +1,44 @@
+{
+  "life" : 5,
+  "goal" : 10,
+  "questions" : [
+    {
+      "type" : "abc",
+      "threshold" : 1,
+      "text" : "This is question one.?",
+      "answers" : [
+        {
+          "text" : "This is answer one.",
+          "value" : -1
+        },
+        {
+          "text" : "This is answer two.",
+          "value" : 1
+        },
+        {
+          "text" : "This is answer three.",
+          "value" : 3
+        }
+      ]
+    },
+    {
+      "type" : "abc",
+      "threshold" : 1,
+      "text" : "This is question two?",
+      "answers" : [
+        {
+          "text" : "This is answer one.",
+          "value" : -1
+        },
+        {
+          "text" : "This is answer two.",
+          "value" : 1
+        },
+        {
+          "text" : "This is answer three.",
+          "value" : 3
+        }
+      ]
+    }
+  ]
+}
