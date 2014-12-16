@@ -1,4 +1,4 @@
 # Lemmy or Bono ?
 
-'Lemmy or Bono ?' is a funny little text-based commandline adventure game to determine weather you are a natural born rockstar (Lemmy) or basically just suck (Bono).<br>
+"Lemmy or Bono ?"" is a funny little text-based commandline adventure game to determine whether you are a natural born rockstar (Lemmy) or basically just suck (Bono).<br>
 I use this tiny project to experiment and play around with ruby.
