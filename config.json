@@ -1,6 +1,6 @@
 {
-  "life" : 5,
-  "goal" : 10,
+  "jack" : 5,
+  "finish" : 10,
   "questions" : [
     {
       "type" : "abc",

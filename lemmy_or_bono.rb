@@ -1,6 +1,7 @@
 require 'json'
-require './question.rb'
-require './answer.rb'
+require './question'
+require './answer'
+require './game'
 
 module LemmyOrBono
   
@@ -10,31 +11,13 @@ module LemmyOrBono
   end
 
   def self.init_game(config)
-    questions = self.generate_questions(config['questions'])
-
-    questions.each do |q|
-      puts q.answers.keys
-    end
-    #puts config['questions'][1]['answers']
-    #puts config['questions'][1]['answers'].shuffle
-  end
-
-  def self.generate_questions(questions_array)
-    questions = []
-    questions_array.each do |q|
-      if q['type'] == Question::TYPE_MULTIPLE_CHOICE
-        questions.push(QuestionMultipleChoice.new(q['threshold'], q['text'], q['answers']))
-      else
-        #questions.push(QuestionSingleChoice.new(q['threshold'], q['text'], q['value']))
-      end
-    end
-    questions
+    Game.new(config['jack'], config['finish'], config['questions'])
   end
 
 end
 
 config = LemmyOrBono.load_config('config.json')
-LemmyOrBono.init_game(config)
+game = LemmyOrBono.init_game(config)
 #a = LemmyOrBono::Answer.new(config['questions'][1]['answers'].first)
 #puts a.text, a.value
 
