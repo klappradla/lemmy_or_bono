@@ -13,30 +13,30 @@
         },
         {
           "text" : "You blow it in your car speakers and drive around town all day.",
-          "value" : 1
+          "value" : 0
         },
         {
           "text" : "You screw some random moviestar and get enough press anyways.",
-          "value" : 3
+          "value" : 1
         }
       ]
     },
     {
       "type" : "abc",
-      "threshold" : 1,
-      "text" : "This is question two?",
+      "threshold" : 2,
+      "text" : "As a kid your parents force you to go to church.\nWhat do you do?",
       "answers" : [
         {
-          "text" : "This is answer one.",
+          "text" : "You explain them, you don't need to go, god loves you anyway.",
           "value" : -1
         },
         {
-          "text" : "This is answer two.",
-          "value" : 1
+          "text" : "You go and sneak out.",
+          "value" : 0
         },
         {
-          "text" : "This is answer three.",
-          "value" : 3
+          "text" : "You go, get wasted on the preacher's wine and smoke some incense",
+          "value" : 1
         }
       ]
     }

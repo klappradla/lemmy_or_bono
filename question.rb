@@ -30,8 +30,6 @@ module LemmyOrBono
 	class QuestionMultipleChoice < Question
 		KEYS = [:a, :b, :c]
 
-		attr_reader :answers
-
 		def initialize(threshold, text, answers)
 			super(threshold, text)
 			@answers = generate_answers(answers)			
