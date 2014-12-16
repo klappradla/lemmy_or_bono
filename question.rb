@@ -1,4 +1,3 @@
-
 module LemmyOrBono
 
 	class Question
@@ -13,13 +12,23 @@ module LemmyOrBono
 		end
 
 		def render
-			puts "render question"
-			3
+			puts @text
+		end
+
+		
+		private
+
+		def get_user_input(range)
+			print "> "
+      choice = STDIN.gets.chomp
+      return choice if range.include? choice
+      user_input(range)
 		end
 	end
 
 
 	class QuestionMultipleChoice < Question
+		KEYS = [:a, :b, :c]
 
 		attr_reader :answers
 
@@ -28,15 +37,26 @@ module LemmyOrBono
 			@answers = generate_answers(answers)			
 		end
 
+		def render
+			super()
+			render_answers
+			choice = get_user_input(KEYS.map(&:to_s)).to_sym
+			@answers[choice].value
+		end
+
 
 		private
 
 		def generate_answers(answers_array)
 			answers = {}
 			answers_array.shuffle.each_with_index do |answer, index|
-				answers[Answer::INDICES[index]] = Answer.new(answer['text'], answer['value'])
+				answers[KEYS[index]] = Answer.new(answer['text'], answer['value'])
 			end
 			answers
+		end
+
+		def render_answers
+			@answers.each { |key, answer| answer.render(key) }
 		end
 		
 	end

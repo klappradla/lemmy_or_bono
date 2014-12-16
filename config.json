@@ -5,18 +5,18 @@
     {
       "type" : "abc",
       "threshold" : 1,
-      "text" : "This is question one.?",
+      "text" : "You just recorded an in your opinion insanely good new album and\nwant everyone in the fuckin world to know that.\nWhat do you do?",
       "answers" : [
         {
-          "text" : "This is answer one.",
+          "text" : "You 'gift' it to every Apple-user and force those fuckers to listen to it.",
           "value" : -1
         },
         {
-          "text" : "This is answer two.",
+          "text" : "You blow it in your car speakers and drive around town all day.",
           "value" : 1
         },
         {
-          "text" : "This is answer three.",
+          "text" : "You screw some random moviestar and get enough press anyways.",
           "value" : 3
         }
       ]
