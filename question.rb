@@ -11,6 +11,11 @@ module LemmyOrBono
 			@threshold = threshold
 			@text = text
 		end
+
+		def render
+			puts "render question"
+			3
+		end
 	end
 
 
@@ -22,6 +27,7 @@ module LemmyOrBono
 			super(threshold, text)
 			@answers = generate_answers(answers)			
 		end
+
 
 		private
 

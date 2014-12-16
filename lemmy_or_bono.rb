@@ -18,6 +18,7 @@ end
 
 config = LemmyOrBono.load_config('config.json')
 game = LemmyOrBono.init_game(config)
+game.play
 #a = LemmyOrBono::Answer.new(config['questions'][1]['answers'].first)
 #puts a.text, a.value
 
