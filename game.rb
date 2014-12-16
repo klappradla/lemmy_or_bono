@@ -2,9 +2,6 @@ module LemmyOrBono
 
 	class Game
 
-		attr_accessor :jack, :questions
-		attr_reader :finish
-
 		def initialize(jack, finish, questions_array)
 			@jack = jack
 			@finish = finish

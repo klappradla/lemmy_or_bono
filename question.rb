@@ -4,7 +4,7 @@ module LemmyOrBono
 		TYPE_MULTIPLE_CHOICE = "abc"
 		TYPE_SINGLE_CHOICE = "!"
 
-		attr_reader :threshold, :text
+		attr_reader :threshold
 
 		def initialize(threshold, text)
 			@threshold = threshold

@@ -1,7 +1,7 @@
 module LemmyOrBono
 
 	class Answer
-		attr_reader :text, :value
+		attr_reader :value
 
 		def initialize(text, value)
 			@text = text
