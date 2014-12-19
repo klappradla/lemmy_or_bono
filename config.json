@@ -35,10 +35,35 @@
           "value" : 0
         },
         {
-          "text" : "You go, get wasted on the preacher's wine and smoke some incense",
+          "text" : "You go, get wasted on the preacher's wine and smoke some incense.",
           "value" : 1
         }
       ]
+    },
+    {
+      "type" : "abc",
+      "threshold" : 1,
+      "text" : "What was the first record you bought?",
+      "answers" : [
+        {
+          "text" : "None, you started with MiniDisk right away.",
+          "value" : -1
+        },
+        {
+          "text" : "The Beatles - your mom payed.",
+          "value" : 0
+        },
+        {
+          "text" : "The Rolling Stones. You saved money for month to grab that fucker.",
+          "value" : 1
+        }
+      ]
+    },
+    {
+      "type" : "single",
+      "threshold" : 3,
+      "text" : "You're about to perform live on TV.\nHow much jack do you down before walking up?",
+      "range" : [0, 5]
     }
   ]
 }

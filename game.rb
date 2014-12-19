@@ -25,7 +25,7 @@ module LemmyOrBono
 		    if q['type'] == Question::TYPE_MULTIPLE_CHOICE
 		      questions.push(QuestionMultipleChoice.new(q['threshold'], q['text'], q['answers']))
 		    else
-		      #questions.push(QuestionSingleChoice.new(q['threshold'], q['text'], q['value']))
+		      questions.push(QuestionSingleChoice.new(q['threshold'], q['text'], q['range']))
 		    end
 		  end
 		  questions
@@ -35,6 +35,7 @@ module LemmyOrBono
 			@questions.each do |question|
 				if question.threshold <= @jack
 					@jack += @questions.delete(question).render
+					puts "current jack: #{@jack}"
 					return true
 				end
 			end
