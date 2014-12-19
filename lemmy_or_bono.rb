@@ -9,16 +9,11 @@ module LemmyOrBono
     JSON.parse(game_data)
   end
 
-  def self.init_game(game_data)
-    Game.new(Config::LIVES, Config::FINISH, game_data['questions'])
+  def self.init_game
+  	game_data = LemmyOrBono.load_game_data(Config::GAME_DATA)
+    Game.new(Config::LIVES, Config::FINISH, game_data['questions']).start
   end
-
-  def self.play
-		game_data = LemmyOrBono.load_game_data(Config::QUESTIONS_FILE)
-		game = LemmyOrBono.init_game(game_data)
-		game.start
-	end
 end
 
-LemmyOrBono::play
+LemmyOrBono::init_game
 

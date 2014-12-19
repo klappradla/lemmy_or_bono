@@ -8,7 +8,7 @@ module LemmyOrBono
 	module Config
 		LIVES = 5
 		FINISH = 15
-		QUESTIONS_FILE = 'assets/questions.json'
+		GAME_DATA = 'assets/game_data.json'
 		INTRO = 'assets/intro.txt'		
 	end
 	
