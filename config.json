@@ -1,6 +1,6 @@
 {
   "jack" : 5,
-  "finish" : 10,
+  "finish" : 15,
   "questions" : [
     {
       "type" : "abc",
@@ -74,6 +74,26 @@
         },
         {
           "text" : "Make it big, loud and blow up the whole fuckin' thing.",
+          "value" : 1
+        }
+      ]
+    },
+
+    {
+      "type" : "abc",
+      "threshold" : 4,
+      "text" : "You have a band? What music do you play?",
+      "answers" : [
+        {
+          "text" : "Vintage-modern-anti-global-warming-pop-punk-hard-soft-rock.",
+          "value" : -1
+        },
+        {
+          "text" : "Blues rock'n'roll.",
+          "value" : 0
+        },
+        {
+          "text" : "Rock'm'Roll.",
           "value" : 1
         }
       ]
