@@ -11,7 +11,7 @@ module LemmyOrBono
 		end
 
 		def render
-			puts "\n#{@text}"
+			puts "\n#{@text}".colorize(:magenta)
 			render_answers
 		end
 
@@ -19,12 +19,12 @@ module LemmyOrBono
 		private
 
 		def get_user_input(range)
-			print "> "
+			print "> ".colorize(:magenta).bold
       choice = STDIN.gets.chomp
       if range.include? choice
       	return choice
       else
-      	puts "Huh?"
+      	puts "Huh?".colorize(:magenta).bold
       	get_user_input(range)
       end
 		end
@@ -79,7 +79,7 @@ module LemmyOrBono
 		private
 
 		def render_answers
-			puts "Choose value between #{@range.first} and #{@range.last}"
+			puts "Choose value between #{@range.first} and #{@range.last}".colorize(:cyan)
 		end
 
 		def randomize_impact(value)

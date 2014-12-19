@@ -1,0 +1,10 @@
+   
+  ////|
+ //// |   .-------------------------------------------.
+|===| |   |               GAME OVER                   |
+| B | |   |     You died, you ran out of jack..       |
+| I | |   |                                           |
+| B | |   |             Go become Jesus,              |
+| L | |   |      you won't make it a rockstar.        |
+| E |/    |                 Sorry.                    |
+'---'     '-------------------------------------------'

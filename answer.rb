@@ -9,7 +9,7 @@ module LemmyOrBono
 		end
 
 		def render(key = '')
-			puts "#{key}) #{@text}"
+			puts "#{key})".colorize(:cyan).bold + " #{@text}".colorize(:cyan)
 		end
 		
 	end

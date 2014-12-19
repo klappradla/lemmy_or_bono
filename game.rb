@@ -48,18 +48,18 @@ module LemmyOrBono
 		end
 
 		def die
-			puts "GAME OVER"
-			puts "You died, you ran out of jack.\nGo become Jesus, you won't make a rockstar.\I'm sorry."
+			puts IO.read(LemmyOrBono::Config::DEATH).colorize(:cyan)
 			exit(0)
 		end
 
 		def finish
 			puts "You won. #{@questions.length} questions left over."
+			puts IO.read(LemmyOrBono::Config::WIN).colorize(:cyan)
 		end
 
 		def intro
-			puts "Welcome to 'Lemmy or Bono'!"
-			puts IO.read(LemmyOrBono::Config::INTRO)
+			puts "\n- Welcome to 'Lemmy or Bono'! -".colorize(:cyan).bold
+			puts IO.read(LemmyOrBono::Config::INTRO).colorize(:cyan)
 		end
 		
 	end
