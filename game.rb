@@ -59,7 +59,7 @@ module LemmyOrBono
 
 		def intro
 			puts "Welcome to 'Lemmy or Bono'!"
-			puts IO.read(INTRO)
+			puts IO.read(LemmyOrBono::Config::INTRO)
 		end
 		
 	end

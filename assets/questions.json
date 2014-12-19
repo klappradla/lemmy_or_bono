@@ -1,6 +1,4 @@
 {
-  "jack" : 5,
-  "finish" : 15,
   "questions" : [
     {
       "type" : "abc",
