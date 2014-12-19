@@ -79,6 +79,7 @@ module LemmyOrBono
 		end
 
 		def randomize_impact(value)
+			#(value * Random.rand(-1..1) * Random.rand(0.5..2.5)).round
 			value * Random.rand(-1..1)
 		end
 			

@@ -8,15 +8,15 @@
       "text" : "You just recorded an in your opinion insanely good new album and\nwant everyone in the fuckin world to know that.\nWhat do you do?",
       "answers" : [
         {
-          "text" : "You 'gift' it to every Apple-user and force those fuckers to listen to it.",
+          "text" : "'Gift' it to every Apple-user and force those fuckers to listen to it.",
           "value" : -1
         },
         {
-          "text" : "You blow it in your car speakers and drive around town all day.",
+          "text" : "Blow it in my car speakers and drive around town all day.",
           "value" : 0
         },
         {
-          "text" : "You screw some random moviestar and get enough press anyways.",
+          "text" : "Screw some random moviestar and have the press do the rest.",
           "value" : 1
         }
       ]
@@ -27,34 +27,72 @@
       "text" : "As a kid your parents force you to go to church.\nWhat do you do?",
       "answers" : [
         {
-          "text" : "You explain them, you don't need to go, god loves you anyway.",
+          "text" : "Explain them, I don't need to go, god loves me anyway.",
           "value" : -1
         },
         {
-          "text" : "You go and sneak out.",
+          "text" : "Go and sneak out.",
           "value" : 0
         },
         {
-          "text" : "You go, get wasted on the preacher's wine and smoke some incense.",
+          "text" : "Go, get wasted on the preacher's wine and smoke some incense.",
           "value" : 1
         }
       ]
     },
     {
       "type" : "abc",
-      "threshold" : 1,
+      "threshold" : 3,
       "text" : "What was the first record you bought?",
       "answers" : [
         {
-          "text" : "None, you started with MiniDisk right away.",
+          "text" : "None, I started with MiniDisk right away.",
           "value" : -1
         },
         {
-          "text" : "The Beatles - your mom payed.",
+          "text" : "The Beatles - my mom payed.",
           "value" : 0
         },
         {
-          "text" : "The Rolling Stones. You saved money for month to grab that fucker.",
+          "text" : "The Rolling Stones. I saved money for month to grab that fucker.",
+          "value" : 1
+        }
+      ]
+    },
+    {
+      "type" : "abc",
+      "threshold" : 3,
+      "text" : "What's the main purpose of a rock'n'roll show?",
+      "answers" : [
+        {
+          "text" : "Show some love to the people who bought tickets.",
+          "value" : -1
+        },
+        {
+          "text" : "See some guys freak out to my music and screw their girlfriends backstage.",
+          "value" : 0
+        },
+        {
+          "text" : "Make it big, loud and blow up the whole fuckin' thing.",
+          "value" : 1
+        }
+      ]
+    },
+    {
+      "type" : "abc",
+      "threshold" : 4,
+      "text" : "A bunch of naked young girls come backstage after your show.\nWhat do you do?",
+      "answers" : [
+        {
+          "text" : "Invite them to play 'spin the bottle' with me.",
+          "value" : -1
+        },
+        {
+          "text" : "Screw them and take them to church with me.",
+          "value" : 0
+        },
+        {
+          "text" : "Have them bring in their moms to screw some real women.",
           "value" : 1
         }
       ]
@@ -64,6 +102,30 @@
       "threshold" : 3,
       "text" : "You're about to perform live on TV.\nHow much jack do you down before walking up?",
       "range" : [0, 5]
+    },
+    {
+      "type" : "single",
+      "threshold" : 4,
+      "text" : "You're invited to your friends mum's birthday party.\nHow much jack do you down before walking up?",
+      "range" : [0, 10]
+    },
+    {
+      "type" : "single",
+      "threshold" : 5,
+      "text" : "Since you're about to become a fuckin rockstar,\nhow many girls do you expect to come\nbackstage after the show to have sex with you?",
+      "range" : [0, 5]
+    },
+    {
+      "type" : "single",
+      "threshold" : 5,
+      "text" : "Since you're about to become a fuckin rockstar,\nhow many girls do you expect to come\nbackstage after the show to have sex with you?",
+      "range" : [0, 5]
+    },
+    {
+      "type" : "single",
+      "threshold" : 6,
+      "text" : "In rockstar business, how many years can you\njust chill until you need to somewhat drop another record?",
+      "range" : [0, 10]
     }
   ]
 }

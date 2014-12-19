@@ -43,7 +43,8 @@ module LemmyOrBono
 		end
 
 		def die
-			puts "You died."
+			puts "GAME OVER"
+			puts "You died, you ran out of jack.\nGo become Jesus, you won't make a rockstar.\I'm sorry."
 			exit(0)
 		end
 
