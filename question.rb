@@ -11,7 +11,7 @@ module LemmyOrBono
 		end
 
 		def render
-			puts @text
+			puts "\n#{@text}"
 			render_answers
 		end
 
@@ -21,8 +21,12 @@ module LemmyOrBono
 		def get_user_input(range)
 			print "> "
       choice = STDIN.gets.chomp
-      return choice if range.include? choice
-      get_user_input(range)
+      if range.include? choice
+      	return choice
+      else
+      	puts "Huh?"
+      	get_user_input(range)
+      end
 		end
 	end
 

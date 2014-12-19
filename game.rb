@@ -8,6 +8,14 @@ module LemmyOrBono
 			@questions = generate_questions(questions_array)
 		end
 
+		def start
+			intro
+			play
+		end
+
+
+		private
+
 		def play
 			while @jack < @finish
 				progress = render_question
@@ -15,9 +23,6 @@ module LemmyOrBono
 			end
 			finish	
 		end
-
-
-		private
 
 		def generate_questions(questions_array)
 		  questions = []
@@ -50,6 +55,11 @@ module LemmyOrBono
 
 		def finish
 			puts "You won. #{@questions.length} questions left over."
+		end
+
+		def intro
+			puts "Welcome to 'Lemmy or Bono'!"
+			puts IO.read(INTRO)
 		end
 		
 	end
