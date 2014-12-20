@@ -54,7 +54,7 @@ module LemmyOrBono
 
 		def finish
 			puts IO.read(Config::WIN).colorize(:cyan)
-			puts "#{@questions.length} questions left over."
+			#puts "#{@questions.length} questions left over."
 		end
 
 		def intro
