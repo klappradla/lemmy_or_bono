@@ -1,8 +1,6 @@
 require './config'
 
 module LemmyOrBono
-
-	include Config
   
   def self.load_game_data(file_path)
     game_data = IO.read(file_path)

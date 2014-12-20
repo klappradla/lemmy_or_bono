@@ -26,11 +26,11 @@ module LemmyOrBono
 
 		def generate_questions(questions_array)
 		  questions = []
-		  questions_array.shuffle.each do |q|
-		    if q['type'] == Question::TYPE_MULTIPLE_CHOICE
-		      questions.push(QuestionMultipleChoice.new(q['threshold'], q['text'], q['answers']))
+		  questions_array.shuffle.each do |question|
+		    if question['type'] == Question::TYPE_MULTIPLE_CHOICE
+		      questions.push(QuestionMultipleChoice.new(question))
 		    else
-		      questions.push(QuestionSingleChoice.new(q['threshold'], q['text'], q['range']))
+		      questions.push(QuestionSingleChoice.new(question))
 		    end
 		  end
 		  questions
@@ -40,7 +40,7 @@ module LemmyOrBono
 			@questions.each do |question|
 				if question.threshold <= @jack
 					@jack += @questions.delete(question).render
-					puts "current jack: #{@jack}"
+					stats
 					return true
 				end
 			end
@@ -48,18 +48,23 @@ module LemmyOrBono
 		end
 
 		def die
-			puts IO.read(LemmyOrBono::Config::DEATH).colorize(:cyan)
+			puts IO.read(Config::DEATH).colorize(:cyan)
 			exit(0)
 		end
 
 		def finish
-			puts "You won. #{@questions.length} questions left over."
-			puts IO.read(LemmyOrBono::Config::WIN).colorize(:cyan)
+			puts IO.read(Config::WIN).colorize(:cyan)
+			puts "#{@questions.length} questions left over."
 		end
 
 		def intro
-			puts "\n- Welcome to 'Lemmy or Bono'! -".colorize(:cyan).bold
-			puts IO.read(LemmyOrBono::Config::INTRO).colorize(:cyan)
+			welcome = IO.readlines(Config::INTRO).first
+			print "\n#{welcome}".colorize(:cyan).bold
+			puts IO.read(Config::INTRO, nil, welcome.length).colorize(:cyan)
+		end
+
+		def stats
+			puts "\t\t# jacks: #{@jack}\t\t\t".colorize(color: :black, background: :cyan)
 		end
 		
 	end
