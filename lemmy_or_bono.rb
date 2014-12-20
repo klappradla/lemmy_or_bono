@@ -16,6 +16,3 @@ module LemmyOrBono
     Game.new(Config::LIVES, Config::FINISH, game_data['questions']).start
   end
 end
-
-LemmyOrBono::init_game
-
