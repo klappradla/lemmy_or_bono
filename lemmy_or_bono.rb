@@ -1,3 +1,7 @@
+require 'rubygems'
+require 'bundler/setup'
+Bundler.require(:default) # require all gems from gemfile
+
 require './config'
 
 module LemmyOrBono

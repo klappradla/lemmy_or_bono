@@ -1,5 +1,5 @@
-require 'colorize'
-require 'json'
+#require 'colorize'
+#require 'json'
 require './question'
 require './answer'
 require './game'
