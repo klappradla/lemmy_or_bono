@@ -2,7 +2,11 @@ require 'rubygems'
 require 'bundler/setup'
 Bundler.require(:default) # require all gems from gemfile
 
-require './config'
+$LOAD_PATH << File.dirname(__FILE__) # require all relative
+require 'lemmy_or_bono/config'
+require 'lemmy_or_bono/question'
+require 'lemmy_or_bono/answer'
+require 'lemmy_or_bono/game'
 
 module LemmyOrBono
   

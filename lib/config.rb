@@ -1,7 +1,3 @@
-require './question'
-require './answer'
-require './game'
-
 module LemmyOrBono
 
 	module Config
