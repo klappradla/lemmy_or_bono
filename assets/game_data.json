@@ -135,12 +135,6 @@
     },
     {
       "type" : "single",
-      "threshold" : 5,
-      "text" : "Since you're about to become a fuckin rockstar,\nhow many girls do you expect to come\nbackstage after the show to have sex with you?",
-      "range" : [0, 5]
-    },
-    {
-      "type" : "single",
       "threshold" : 6,
       "text" : "In rockstar business, how many years can you\njust chill until you need to somewhat drop another record?",
       "range" : [0, 10]
