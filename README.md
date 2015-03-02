@@ -10,14 +10,15 @@ The game is implemented in Ruby 2.1. To get the required dependencies, navigate 
 ```ruby
 bundle install
 ```
-It will fetch all required Rubygems (you of course need [http://bundler.io/] installed for this).
+It will fetch all required Rubygems (you of course need http://bundler.io/ installed for this).
 
 
 Then, run
 ```ruby
 rake play
 ```
-to start the game.<br>
+to start the game.
+
 Within the game, answer questions by entering 'a', 'b', 'c' or a numberic value (integer) within the given answer range. Press enter after each answer to continue. Enjoy!
 
 
