@@ -5,9 +5,9 @@ module LemmyOrBono
 
 		attr_reader :threshold
 
-		def initialize(data_hash)
-			@threshold = data_hash['threshold']
-			@text = data_hash['text']
+		def initialize(question_hash)
+			@threshold = question_hash['threshold']
+			@text = question_hash['text']
 		end
 
 		def render
@@ -34,9 +34,9 @@ module LemmyOrBono
 	class QuestionMultipleChoice < Question
 		KEYS = [:a, :b, :c]
 
-		def initialize(data_hash)
-			super(data_hash)
-			@answers = generate_answers(data_hash['answers'])			
+		def initialize(question_hash)
+			super(question_hash)
+			@answers = generate_answers(question_hash['answers'])			
 		end
 
 		def render
@@ -64,9 +64,9 @@ module LemmyOrBono
 
 	class QuestionSingleChoice < Question
 
-		def initialize(data_hash)
-			super(data_hash)
-			limits = data_hash['range']
+		def initialize(question_hash)
+			super(question_hash)
+			limits = question_hash['range']
 			@range = (limits.first..limits.last).to_a
 		end
 

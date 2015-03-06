@@ -17,6 +17,7 @@ module LemmyOrBono
 
   def self.init_game
   	game_data = LemmyOrBono.load_game_data(Config::GAME_DATA)
-    Game.new(Config::LIVES, Config::FINISH, game_data['questions']).start
+    game = Game.new(Config::LIVES, Config::FINISH, game_data['questions'])
+    game.start
   end
 end
