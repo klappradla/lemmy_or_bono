@@ -28,9 +28,9 @@ module LemmyOrBono
 		  questions = []
 		  questions_array.shuffle.each do |question|
 		    if question['type'] == Question::TYPE_MULTIPLE_CHOICE
-		      questions.push(QuestionMultipleChoice.new(question))
+		      questions << QuestionMultipleChoice.new(question)
 		    else
-		      questions.push(QuestionSingleChoice.new(question))
+		      questions << QuestionSingleChoice.new(question)
 		    end
 		  end
 		  questions
